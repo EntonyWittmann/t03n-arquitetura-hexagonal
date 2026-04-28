@@ -3,7 +3,7 @@ package com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.in.mes
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class PedidoDTO {
+public class EntradaPedidoDTO {
 
     private String zipCode;
     private Integer customerId;

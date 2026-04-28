@@ -3,7 +3,7 @@ package com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.in.mes
 import com.fag.lucasmartins.arquitetura_software.application.ports.in.service.PedidoServicePort;
 import com.fag.lucasmartins.arquitetura_software.core.domain.bo.PedidoBO;
 import com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.in.messaging.entradaestoque.exceptions.ConsumerSQSException;
-import com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.in.messaging.entradapedido.dto.PedidoDTO;
+import com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.in.messaging.entradapedido.dto.EntradaPedidoDTO;
 import com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.in.messaging.entradapedido.mapper.PedidoDTOMapper;
 import io.awspring.cloud.sqs.annotation.SqsListener;
 import org.slf4j.Logger;
@@ -22,7 +22,7 @@ public class SqsPedidoAdapter {
     }
 
     @SqsListener("${queue.order-events}")
-    public void listen(PedidoDTO dto) {
+    public void listen(EntradaPedidoDTO dto) {
         try {
             log.info("Mensagem recebida: {}", dto.getCustomerId());
 
