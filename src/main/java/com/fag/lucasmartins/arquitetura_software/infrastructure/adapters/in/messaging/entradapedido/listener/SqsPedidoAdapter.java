@@ -1,4 +1,4 @@
-package com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.in.messaging.entradapedido;
+package com.fag.lucasmartins.arquitetura_software.infrastructure.adapters.in.messaging.entradapedido.listener;
 
 import com.fag.lucasmartins.arquitetura_software.application.ports.in.service.PedidoServicePort;
 import com.fag.lucasmartins.arquitetura_software.core.domain.bo.PedidoBO;
